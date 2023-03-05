@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Player>
+  <Resources lan="zh-cn" name='简体中文'>
+  	<Page>
+  		<title>网络高清摄像机</title>
+  		<idCameraConfig>配置</idCameraConfig>
+  		<idPlayBack>回放</idPlayBack>
+  		<idQuit>退出</idQuit>
+      <exitlogin>退出</exitlogin>
+      <configipc>配置</configipc>
+      <playback>回放</playback>      
+  		<idSavePath>存储路径</idSavePath>
+      <idChangeStream>码流</idChangeStream>
+      <idMainStream>主码流</idMainStream>
+      <idSubStream>子码流</idSubStream>
+      <idZoom>缩放</idZoom>
+      <idFocus>聚焦</idFocus>
+      <idIris>巡视</idIris>
+      <idOrbit>开启巡视</idOrbit>
+      <idOrbitStop>停止巡视</idOrbitStop>
+      <idScanBegin>线扫起点</idScanBegin>
+      <idScanEnd>线扫终点</idScanEnd>
+      <idScanOn>开启线扫</idScanOn>
+      <idScanOff>关闭线扫</idScanOff>
+      <idBLCOff>黑白模式</idBLCOff>
+      <idBLCOn>彩色模式</idBLCOn>
+      <idMirrorOff>镜像关</idMirrorOff>
+      <idMirrorOn>镜像开</idMirrorOn>
+      <idFreezeOff>图像冻结关</idFreezeOff>
+      <idFreezeOn>图像冻结开</idFreezeOn>
+      <idStepsZOff>数字变倍关</idStepsZOff>
+      <idStepsZOn>数字变倍开</idStepsZOn>
+      <idScreenOff>屏显关</idScreenOff>
+      <idScreenOn>屏显开</idScreenOn>
+      <idMin.SenOff>低照度关</idMin.SenOff>
+      <idMin.SenOn>低照度开</idMin.SenOn>
+      <idILLOff>背光补偿关</idILLOff>
+      <idILLOn>背光补偿开</idILLOn>
+      <idCamReset>像机复位</idCamReset>
+      <idCamOn>像机开关</idCamOn>
+      <idAWBOn>白平衡自动</idAWBOn>
+      <idAWBOff>白平衡手动</idAWBOff>
+      <idRWB>白平衡R</idRWB>
+      <idBWB>白平衡B</idBWB>
+      <idMWB>白平衡M</idMWB>
+      <idGWB>白平衡G</idGWB>
+      <idInitSet>初始设置</idInitSet>
+      <idMenu>菜单</idMenu>
+      <idTrackOn>开启自动跟踪</idTrackOn>
+      <idTrackOff>关闭自动跟踪</idTrackOff>
+      <idPathOn>开始模式路径</idPathOn>
+      <idPathOff>关闭模式路径</idPathOff>
+      <idBlcAuto>彩色黑白自动</idBlcAuto>
+      <idWdrOff>宽动态关</idWdrOff>
+      <idWdrOn>宽动态开</idWdrOn>
+      <idPanSpeed>水平速度</idPanSpeed>
+      <idTiltSpeed>垂直速度</idTiltSpeed>
+      <idAlarmType>告警类型</idAlarmType>
+      <idAlarmTime>告警时间</idAlarmTime>
+      <PresetEdit>预置点</PresetEdit>
+      <AddPresetBtn>添加</AddPresetBtn>
+      <idStreamType>播放码流</idStreamType>
+      <Del_PresetListChkBox>预置点列表</Del_PresetListChkBox>
+      <DelPresetBtn>刪除</DelPresetBtn>
+      <Call_PresetListChkBox>预置点列表</Call_PresetListChkBox>
+      <CallPresetBtn>调用</CallPresetBtn>
+      <zoomtele>放大</zoomtele>
+      <zoomwide>缩小</zoomwide>
+      <FFar>远焦</FFar>
+      <FNear>近焦</FNear>
+      <IrisOpen>光圈开</IrisOpen>
+      <IrisClose>光圈关</IrisClose>
+      <Talkback>对讲</Talkback>
+      <RealRecord>录像</RealRecord>
+      <SnapPicture>抓拍</SnapPicture>
+      <StopPlayReal>停止播放</StopPlayReal>
+      <PlayRealVideo>播放视频</PlayRealVideo>
+      <left>左</left>
+      <right>右</right>
+      <up>上</up>
+      <down>下</down>
+      <left_up>左上</left_up>
+      <right_up>右上</right_up>
+      <left_down>左下</left_down>
+      <right_down>右下</right_down>
+      <back>自动</back>
+      <exeadvancefunc>执行</exeadvancefunc>
+      <exeorbitscan>执行</exeorbitscan>
+      <LoadPath>单击修改存储路径</LoadPath>
+      <BufferTick_tip>缓冲</BufferTick_tip>
+    </Page>
+    <js>
+      <PlayerTips1>速度值必须是</PlayerTips1>
+      <PlayerTips2>速度值必须是整数</PlayerTips2>
+      <PlayerTips3>预置点必须是</PlayerTips3>
+      <PlayerTips4>预置点必须是整数</PlayerTips4>
+    </js>
+  </Resources>
+  
+  
+  <Resources lan='zh-tw' name='繁體中文'>
+    <Page>
+      <title>網絡高畫質攝影機</title>
+      <idCameraConfig>配置</idCameraConfig>
+      <idPlayBack>回放</idPlayBack>
+      <idQuit>退出</idQuit>
+
+      <exitlogin>退出</exitlogin>
+      <configipc>配置</configipc>
+      <playback>回放</playback>
+      
+      <idSavePath>儲存路徑</idSavePath>
+      <idChangeStream>串流</idChangeStream>
+      <idMainStream>主串流</idMainStream>
+      <idSubStream>子串流</idSubStream>
+      <idZoom>變焦</idZoom>
+      <idFocus>焦聚</idFocus>
+      <idIris>巡弋</idIris>
+      <idOrbit>開啟巡弋</idOrbit>
+      <idOrbitStop>停止巡弋</idOrbitStop>
+      <idScanBegin>掃描起點</idScanBegin>
+      <idScanEnd>掃描終點</idScanEnd>
+      <idScanOn>開啟掃描</idScanOn>
+      <idScanOff>關閉掃描</idScanOff>
+      <idBLCOff>黑白模式</idBLCOff>
+      <idBLCOn>彩色模式</idBLCOn>
+      <idMirrorOff>鏡像關</idMirrorOff>
+      <idMirrorOn>鏡像開</idMirrorOn>
+      <idFreezeOff>影像凍結關</idFreezeOff>
+      <idFreezeOn>影像凍結開</idFreezeOn>
+      <idStepsZOff>數位變焦關</idStepsZOff>
+      <idStepsZOn>數位變焦開</idStepsZOn>
+      <idScreenOff>螢幕顯示關</idScreenOff>
+      <idScreenOn>螢幕顯示開</idScreenOn>
+      <idMin.SenOff>低照度關</idMin.SenOff>
+      <idMin.SenOn>低照度開</idMin.SenOn>
+      <idILLOff>逆光補償關</idILLOff>
+      <idILLOn>逆光補償開</idILLOn>
+      <idCamReset>恢復出廠值</idCamReset>
+      <idCamOn>攝影機開關</idCamOn>
+      <idAWBOn>白平衡自動</idAWBOn>
+      <idAWBOff>白平衡手動</idAWBOff>
+      <idRWB>白平衡R</idRWB>
+      <idBWB>白平衡B</idBWB>
+      <idMWB>白平衡M</idMWB>
+      <idGWB>白平衡G</idGWB>
+      <idInitSet>初始設置</idInitSet>
+      <idMenu>選單</idMenu>
+      <idTrackOn>開啟自動追蹤</idTrackOn>
+      <idTrackOff>關閉自動追蹤</idTrackOff>
+      <idPathOn>開始模式路徑</idPathOn>
+      <idPathOff>關閉模式路徑</idPathOff>
+      <idBlcAuto>彩色黑白自動</idBlcAuto>
+      <idWdrOff>寬動態關</idWdrOff>
+      <idWdrOn>寬動態開</idWdrOn>
+      <idPanSpeed>水平速度</idPanSpeed>
+      <idTiltSpeed>垂直速度</idTiltSpeed>
+      <idAlarmType>警報類型</idAlarmType>
+      <idAlarmTime>警報時間</idAlarmTime>
+      <PresetEdit>預設點</PresetEdit>
+      <AddPresetBtn>增加</AddPresetBtn>
+      <idStreamType>影像類型</idStreamType>
+      <Del_PresetListChkBox>預設點列表</Del_PresetListChkBox>
+      <DelPresetBtn>刪除</DelPresetBtn>
+      <Call_PresetListChkBox>預設點列表</Call_PresetListChkBox>
+      <CallPresetBtn>啟用</CallPresetBtn>
+      <zoomtele>放大</zoomtele>
+      <zoomwide>縮小</zoomwide>
+      <FFar>遠焦距</FFar>
+      <FNear>近焦距</FNear>
+      <IrisOpen>光圈開</IrisOpen>
+      <IrisClose>光圈關</IrisClose>
+      <Talkback>對講</Talkback>
+      <RealRecord>錄影</RealRecord>
+      <SnapPicture>拍照</SnapPicture>
+      <StopPlayReal>停止播放</StopPlayReal>
+      <PlayRealVideo>播放影像</PlayRealVideo>
+      <left>左</left>
+      <right>右</right>
+      <up>上</up>
+      <down>下</down>
+      <left_up>左上</left_up>
+      <right_up>右上</right_up>
+      <left_down>左下</left_down>
+      <right_down>右下</right_down>
+      <back>自動</back>
+
+      <exeadvancefunc>執行</exeadvancefunc>
+      <exeorbitscan>執行</exeorbitscan>
+      <LoadPath>執行修改檔案儲存目錄</LoadPath>
+      <BufferTick_tip>緩衝</BufferTick_tip>      
+    </Page>
+    <js>
+      <PlayerTips1>速度值必需是</PlayerTips1>
+      <PlayerTips2>速度值必需是整數</PlayerTips2>
+      <PlayerTips3>預設點必需是</PlayerTips3>
+      <PlayerTips4>預設點必需是整數</PlayerTips4>
+    </js>
+  </Resources>
+  
+  
+  <Resources lan='en-us' name='English'>
+    <Page>
+      <title>IP Camera</title>
+      <idCameraConfig>Config</idCameraConfig>
+      <idPlayBack>PlayBack</idPlayBack>
+      <idQuit>Quit</idQuit>
+
+      <exitlogin>Quit</exitlogin>
+      <configipc>Config</configipc>
+      <playback>PlayBack</playback>
+      
+      <idSavePath>SavePath</idSavePath>
+      <idChangeStream>Stream</idChangeStream>
+  		<idMainStream>MainStream</idMainStream>
+  		<idSubStream>SubStream</idSubStream>
+  		<idZoom>Zoom</idZoom>
+  		<idFocus>Focus</idFocus>
+  		<idIris>Orbit</idIris>
+  		<idOrbit>Start Orbit</idOrbit>
+  		<idOrbitStop>Stop Orbit</idOrbitStop>
+  		<idScanBegin>Scan Start Point</idScanBegin>
+  		<idScanEnd>Scan Stop Point</idScanEnd>
+  		<idScanOn>Start Scan</idScanOn>
+  		<idScanOff>Stop Scan</idScanOff>
+  		<idBLCOff>Black/White</idBLCOff>
+  		<idBLCOn>Color</idBLCOn>
+  		<idMirrorOff>Mirror Off</idMirrorOff>
+  		<idMirrorOn>Mirror On</idMirrorOn>
+  		<idFreezeOff>Freeze Off</idFreezeOff>
+  		<idFreezeOn>Freeze On</idFreezeOn>
+  		<idStepsZOff>Steps Off</idStepsZOff>
+  		<idStepsZOn>Steps On</idStepsZOn>
+  		<idScreenOff>Screen Off</idScreenOff>
+  		<idScreenOn>Screen On</idScreenOn>
+  		<idMin.SenOff>Lumen Off</idMin.SenOff>
+  		<idMin.SenOn>Lumen On</idMin.SenOn>
+  		<idILLOff>ILL Off</idILLOff>
+  		<idILLOn>ILL On</idILLOn>
+  		<idCamReset>Camera Reset</idCamReset>
+  		<idCamOn>Camera Switch</idCamOn>
+  		<idAWBOn>B/W Manual</idAWBOn>
+  		<idAWBOff>B/W Auto</idAWBOff>
+  		<idRWB>WB R</idRWB>
+  		<idBWB>WB B</idBWB>
+  		<idMWB>WB M</idMWB>
+  		<idGWB>WB G</idGWB>
+  		<idInitSet>Initial Set</idInitSet>
+  		<idMenu>Menu</idMenu>
+  		<idTrackOn>Track On</idTrackOn>
+  		<idTrackOff>Track Off</idTrackOff>
+  		<idPathOn>Path On</idPathOn>
+  		<idPathOff>Path Off</idPathOff>
+      <idBlcAuto>B/W Color Auto</idBlcAuto>
+      <idWdrOff>WDR Off</idWdrOff>
+      <idWdrOn>WDR On</idWdrOn>
+  		<idPanSpeed>Pan Speed</idPanSpeed>
+  		<idTiltSpeed>Tilt Speed</idTiltSpeed>
+  		<idAlarmType>Alarm Type</idAlarmType>
+  		<idAlarmTime>Alarm Time</idAlarmTime>
+  		<PresetEdit>Preset</PresetEdit>
+  		<AddPresetBtn>Add</AddPresetBtn>
+	        <idStreamType>Stream</idStreamType>
+  		<Del_PresetListChkBox>Preset List</Del_PresetListChkBox>
+  		<DelPresetBtn>Delete</DelPresetBtn>
+  		<Call_PresetListChkBox>Preset List</Call_PresetListChkBox>
+  		<CallPresetBtn>Call</CallPresetBtn>
+  		<zoomtele>Zoom In</zoomtele>
+  		<zoomwide>Zoom Out</zoomwide>
+  		<FFar>Focus Far</FFar>
+  		<FNear>Focus Near</FNear>
+  		<IrisOpen>Iris Open</IrisOpen>
+  		<IrisClose>Iris Close</IrisClose>
+  		<Talkback>Voice</Talkback>
+  		<RealRecord>Record</RealRecord>
+  		<SnapPicture>Snap Picture</SnapPicture>
+      <StopPlayReal>Stop Play</StopPlayReal>
+      <PlayRealVideo>Play Video</PlayRealVideo>
+      
+      <left>Left</left>
+      <right>Right</right>
+      <up>Up</up>
+      <down>Down</down>
+      <left_up>Left Up</left_up>
+      <right_up>Right Up</right_up>
+      <left_down>Left Down</left_down>
+      <right_down>Right Down</right_down>
+      <back>Auto</back>
+
+      <exeadvancefunc>Execute</exeadvancefunc>
+      <exeorbitscan>Execute</exeorbitscan>
+      <LoadPath>Click To Change Save Path</LoadPath>
+      <BufferTick_tip>Buffer</BufferTick_tip>
+       
+    </Page>
+  	<js>
+      <PlayerTips1>Speed value must be</PlayerTips1>
+      <PlayerTips2>Speed value must be integer.</PlayerTips2>
+      <PlayerTips3>Preset value must be</PlayerTips3>
+      <PlayerTips4>Preset value must be integer.</PlayerTips4>
+    </js>
+  </Resources>
+
+
+  <Resources lan='ru-ru' name='русский'>
+    <Page>
+      <title> NV HD IP Камера</title>
+      <idCameraConfig>Настройки камеры</idCameraConfig>
+      <idPlayBack>Воспроизведение</idPlayBack>
+      <idQuit>Выход</idQuit>
+
+      <exitlogin>Выход</exitlogin>
+      <configipc>Настройки камеры</configipc>
+      <playback>Воспроизведение</playback>
+
+      <idSavePath>Путь сохранения</idSavePath>
+      <idChangeStream>Поток</idChangeStream>
+      <idMainStream>Основной поток</idMainStream>
+      <idSubStream>Дополнительный поток</idSubStream>
+      <idZoom> Zoom</idZoom>
+      <idFocus>Фокус</idFocus>
+      <idIris>Обход</idIris>
+      <idOrbit>Начать обход</idOrbit>
+      <idOrbitStop>Остановить обход</idOrbitStop>
+      <idScanBegin>Продолжить тур</idScanBegin>
+      <idScanEnd>Конец тура</idScanEnd>
+      <idScanOn>Начать тур</idScanOn>
+      <idScanOff>Остановить тур</idScanOff>
+      <idBLCOff>Ч/б режим</idBLCOff>
+      <idBLCOn>Цветной режим</idBLCOn>
+      <idMirrorOff>Зеркало выкл</idMirrorOff>
+      <idMirrorOn>Зеркало вкл</idMirrorOn>
+      <idFreezeOff>Заморозка выкл</idFreezeOff>
+      <idFreezeOn>Заморозка вкл</idFreezeOn>
+      <idStepsZOff>Цифровой zoom выкл</idStepsZOff>
+      <idStepsZOn>Цифровой zoom вкл</idStepsZOn>
+      <idScreenOff>Экран выкл</idScreenOff>
+      <idScreenOn>Экран вкл</idScreenOn>
+      <idMin.SenOff>Плохое освещение выкл</idMin.SenOff>
+      <idMin.SenOn>Плохое освещение вкл</idMin.SenOn>
+      <idILLOff> BLC выкл</idILLOff>
+      <idILLOn> BLC вкл</idILLOn>
+      <idCamReset>Сброс камеры</idCamReset>
+      <idCamOn>Камера вкл/выкл</idCamOn>
+      <idAWBOn>Авто. баланс белого</idAWBOn>
+      <idAWBOff>Ручной баланс белого</idAWBOff>
+      <idRWB> R баланс белого</idRWB>
+      <idBWB> B баланс белого</idBWB>
+      <idMWB> M баланс белого</idMWB>
+      <idGWB> G баланс белого</idGWB>
+      <idInitSet>Начальная настройка</idInitSet>
+      <idMenu>Меню</idMenu>
+      <idTrackOn>Слежение вкл</idTrackOn>
+      <idTrackOff>Слежение выкл</idTrackOff>
+      <idPathOn>Начало слежения</idPathOn>
+      <idBlcAuto>Черно-белый цвет автоматически</idBlcAuto>
+      <idWdrOff>Широкий динамический Off</idWdrOff>
+      <idWdrOn>Широкий динамический открытым</idWdrOn>
+      <idPathOff>Конец слежения</idPathOff>
+      <idPanSpeed>Скорость панорамирования</idPanSpeed>
+      <idTiltSpeed>Скорость наклона</idTiltSpeed>
+      <idAlarmType>Тип тревоги</idAlarmType>
+      <idAlarmTime>Время тревоги</idAlarmTime>
+      <PresetEdit>Предустановки</PresetEdit>
+      <AddPresetBtn>Добавить предустановку</AddPresetBtn>
+      <idStreamType>Stream</idStreamType>
+      <Del_PresetListChkBox>Список заданных точек</Del_PresetListChkBox>
+      <DelPresetBtn>Удалить</DelPresetBtn>
+      <Call_PresetListChkBox>Список заданных точек</Call_PresetListChkBox>
+      <CallPresetBtn>Сброс</CallPresetBtn>
+      <zoomtele>Увеличить</zoomtele>
+      <zoomwide>Уменьшить</zoomwide>
+      <FFar>Фокус +</FFar>
+      <FNear>Фокус -</FNear>
+      <IrisOpen>АРД открыть</IrisOpen>
+      <IrisClose>АРД закрыть</IrisClose>
+      <Talkback>Звук</Talkback>
+      <RealRecord>Запись</RealRecord>
+      <SnapPicture>Снимок</SnapPicture>
+      <StopPlayReal>Stop Play</StopPlayReal>
+      <PlayRealVideo>Play Video</PlayRealVideo>
+      <left>Left</left>
+      <right>Right</right>
+      <up>Up</up>
+      <down>Down</down>
+      <left_up>Left Up</left_up>
+      <right_up>Right Up</right_up>
+      <left_down>Left Down</left_down>
+      <right_down>Right Down</right_down>
+      <back>Auto</back>
+      <exeadvancefunc>Execute</exeadvancefunc>
+      <exeorbitscan>Execute</exeorbitscan>
+      <LoadPath>Click To Change Save Path</LoadPath>
+      <BufferTick_tip>Buffer</BufferTick_tip>
+
+    </Page>
+    <js>
+      <PlayerTips1>Скорость должна быть</PlayerTips1>
+      <PlayerTips2>Скорость должна быть целым числом</PlayerTips2>
+      <PlayerTips3>Предустановленная точка должна быть</PlayerTips3>
+      <PlayerTips4>Предустановленная точка должна быть целым числом</PlayerTips4>
+    </js>
+  </Resources>
+
+
+
+
+  <Resources lan='tr-tr' name='Türkçe'>
+    <Page>
+      <title>IP Camera</title>
+      <idCameraConfig>Ayarlar</idCameraConfig>
+      <idPlayBack>Oynat</idPlayBack>
+      <idQuit>Çık</idQuit>
+
+      <exitlogin>Çık</exitlogin>
+      <configipc>Ayarlar</configipc>
+      <playback>Oynat</playback>
+
+      <idSavePath>Farklı Kaydet</idSavePath>
+      <idChangeStream>Stream</idChangeStream>
+      <idMainStream>MainStream</idMainStream>
+      <idSubStream>SubStream</idSubStream>
+      <idZoom>Zoom</idZoom>
+      <idFocus>Focus</idFocus>
+      <idIris>Rota</idIris>
+      <idOrbit>Rota Başlat</idOrbit>
+      <idOrbitStop>Rota Durdurt</idOrbitStop>
+      <idScanBegin>Tarama Başlama  Noktası</idScanBegin>
+      <idScanEnd>Tarama Bitiş Nokatsı</idScanEnd>
+      <idScanOn>Başlat Tarama</idScanOn>
+      <idScanOff>Durdur Tarama</idScanOff>
+      <idBLCOff>Siyah/Beyaz</idBLCOff>
+      <idBLCOn>Renkli</idBLCOn>
+      <idMirrorOff>Mirror Kapa</idMirrorOff>
+      <idMirrorOn>Mirror Aç</idMirrorOn>
+      <idFreezeOff>Freeze Kapa</idFreezeOff>
+      <idFreezeOn>Freeze Aç</idFreezeOn>
+      <idStepsZOff>Steps Kapa</idStepsZOff>
+      <idStepsZOn>Steps Aç</idStepsZOn>
+      <idScreenOff>Ekran Kapat</idScreenOff>
+      <idScreenOn>Ekran Aç</idScreenOn>
+      <idMin.SenOff>Lumen Kapa</idMin.SenOff>
+      <idMin.SenOn>Lumen Aç</idMin.SenOn>
+      <idILLOff>ILL Kapa</idILLOff>
+      <idILLOn>ILL Aç</idILLOn>
+      <idCamReset>Kamera Reset</idCamReset>
+      <idCamOn>Camera Değiş</idCamOn>
+      <idAWBOn>S/B Manuel</idAWBOn>
+      <idAWBOff>S/BOto</idAWBOff>
+      <idRWB>WB R</idRWB>
+      <idBWB>WB B</idBWB>
+      <idMWB>WB M</idMWB>
+      <idGWB>WB G</idGWB>
+      <idInitSet>Başlangıç Ayarı</idInitSet>
+      <idMenu>Menü</idMenu>
+      <idTrackOn>Önizleme Aç</idTrackOn>
+      <idTrackOff>Önizleme Kapat</idTrackOff>
+      <idPathOn>Yol Aç</idPathOn>
+      <idPathOff>Yol Kapa</idPathOff>
+      <idBlcAuto>S/B Renkli Otomatik</idBlcAuto>
+      <idWdrOff>WDR Kapat</idWdrOff>
+      <idWdrOn>WDR Aç</idWdrOn>
+      <idPanSpeed>Pan Speed</idPanSpeed>
+      <idTiltSpeed>Tilt Speed</idTiltSpeed>
+      <idAlarmType>Alarm Şekli</idAlarmType>
+      <idAlarmTime>Alarm Zamanı</idAlarmTime>
+      <PresetEdit>Preset</PresetEdit>
+      <AddPresetBtn>Ekle</AddPresetBtn>
+      <idStreamType>Stream</idStreamType>
+      <Del_PresetListChkBox>Preset Liste</Del_PresetListChkBox>
+      <DelPresetBtn>Sil</DelPresetBtn>
+      <Call_PresetListChkBox>Preset Liste</Call_PresetListChkBox>
+      <CallPresetBtn>Git</CallPresetBtn>
+      <zoomtele>Zoom +</zoomtele>
+      <zoomwide>Zoom -</zoomwide>
+      <FFar>Focus -</FFar>
+      <FNear>Focus +</FNear>
+      <IrisOpen>Iris Aç</IrisOpen>
+      <IrisClose>Iris Kapat</IrisClose>
+      <Talkback>KOnuşma</Talkback>
+      <RealRecord>Kayıt</RealRecord>
+      <SnapPicture>Resim Çek</SnapPicture>
+      <StopPlayReal>Durdur</StopPlayReal>
+      <PlayRealVideo>Video Oynat</PlayRealVideo>
+
+      <left>Sol</left>
+      <right>Sağ</right>
+      <up>Yukarı</up>
+      <down>Aşağı</down>
+      <left_up>Sol Yukarı</left_up>
+      <right_up>Sağ Yukarı</right_up>
+      <left_down>Sol Aşağı</left_down>
+      <right_down>Sağ Aşağı</right_down>
+      <back>Auto</back>
+
+      <exeadvancefunc>devreye al</exeadvancefunc>
+      <exeorbitscan>Devreye al</exeorbitscan>
+      <LoadPath>Kayıt yolunu Değişir</LoadPath>
+      <BufferTick_tip>Buffer</BufferTick_tip>
+
+    </Page>
+    <js>
+      <PlayerTips1>Hız değeri olmalıdır</PlayerTips1>
+      <PlayerTips2>Hız değeri tamsayı olmalıdır.</PlayerTips2>
+      <PlayerTips3>Preset Belirlenmelidir</PlayerTips3>
+      <PlayerTips4>Preset Tamsayı Olmalıdır.</PlayerTips4>
+    </js>
+  </Resources>
+  
+   
+  
+
+  <Resources lan='pl-pl' name='Polska'>
+    <Page>
+      <title>IP kamera</title>
+      <idCameraConfig>Ustawienia</idCameraConfig>
+      <idPlayBack>Odtwarzanie</idPlayBack>
+      <idQuit>Wyjscie</idQuit>
+
+      <exitlogin>Wyjscie</exitlogin>
+      <configipc>Ustawienia</configipc>
+      <playback>Odtwarzanie</playback>
+
+      <idSavePath>Zapisz sciezke</idSavePath>
+      <idChangeStream>Strumien</idChangeStream>
+      <idMainStream>Glowny strumien</idMainStream>,
+      <idSubStream>Dodatkowy strumien</idSubStream>
+      <idZoom>Zoom</idZoom>
+      <idFocus>Ostrosc</idFocus>
+      <idIris>Krazenie</idIris>
+      <idOrbit>Start krazenia</idOrbit>
+      <idOrbitStop>Przerwij krazenie</idOrbitStop>
+      <idScanBegin>Punkt startu skanowania</idScanBegin>
+      <idScanEnd>Punkt konca skanowania</idScanEnd>
+      <idScanOn>Start skanowania</idScanOn>
+      <idScanOff>Przerwij skanowanie</idScanOff>
+      <idBLCOff>Czarne/Białe</idBLCOff>
+      <idBLCOn>Kolor</idBLCOn>
+      <idMirrorOff>Lustro wylaczone</idMirrorOff>
+      <idMirrorOn>Lustro wlaczone</idMirrorOn>
+      <idFreezeOff>Zamrazanie wylaczone</idFreezeOff>
+      <idFreezeOn>Zamrazanie wlaczone</idFreezeOn>
+      <idStepsZOff>Postep wylaczony</idStepsZOff>
+      <idStepsZOn>Postep wlaczony</idStepsZOn>
+      <idScreenOff>Ekran wylaczony</idScreenOff>
+      <idScreenOn>Ekran wlaczony</idScreenOn>
+      <idMin.SenOff>Strumien swietlny wylaczony</idMin.SenOff>
+      <idMin.SenOn>Strumien swietlny wlaczony</idMin.SenOn>
+      <idILLOff>ILL wylaczony</idILLOff>
+      <idILLOn>ILL wlaczony</idILLOn>
+      <idCamReset>Reset kamery</idCamReset>
+      <idCamOn>Przelacznik kamery</idCamOn>
+      <idAWBOn>B/W Manual</idAWBOn>
+      <idAWBOff>B/W Auto</idAWBOff>
+      <idRWB>WB R</idRWB>
+      <idBWB>WB B</idBWB>
+      <idMWB>WB M</idMWB>
+      <idGWB>WB G</idGWB>
+      <idInitSet>Zestaw poczatkowy</idInitSet>
+      <idMenu>Menu</idMenu>
+      <idTrackOn>Sledzenie wlaczone</idTrackOn>
+      <idTrackOff>Sledzenie wylaczone</idTrackOff>
+      <idPathOn>Sciezka wlaczona</idPathOn>
+      <idPathOff>Sciezka wylaczona</idPathOff>
+      <idBlcAuto>B/W Color Auto</idBlcAuto>
+      <idWdrOff>WDR wylaczony</idWdrOff>
+      <idWdrOn>WDR wlaczony</idWdrOn>
+      <idPanSpeed>Szybkosc obrotu</idPanSpeed>
+      <idTiltSpeed>szybkosc pochylenia</idTiltSpeed>
+      <idAlarmType>Typ alarmu</idAlarmType>
+      <idAlarmTime>Czas alarmu</idAlarmTime>
+      <PresetEdit>nastawy wstepne</PresetEdit>
+      <AddPresetBtn>Dodaj</AddPresetBtn>
+      <Del_PresetListChkBox>Lista ustawien wstepnych</Del_PresetListChkBox>
+      <DelPresetBtn>Usun</DelPresetBtn>
+      <Call_PresetListChkBox>Lista ustawien wstepnych</Call_PresetListChkBox>
+      <CallPresetBtn>Rozmowa</CallPresetBtn>
+      <zoomtele>Zblizenie</zoomtele>
+      <zoomwide>Oddalenie</zoomwide>
+      <FFar>wyostrz odlegle</FFar>
+      <FNear>Wyostrz bliskie</FNear>
+      <IrisOpen>Przyslona otwarta</IrisOpen>
+      <IrisClose>Przyslona zamknieta</IrisClose>
+      <Talkback>Glos</Talkback>
+      <RealRecord>Nagranie</RealRecord>
+      <SnapPicture>Przechwyc obraz</SnapPicture>
+      <StopPlayReal>Przerwij odtwarzanie</StopPlayReal>
+      <PlayRealVideo>Odtworz wideo</PlayRealVideo>
+
+      <left>Lewo</left>
+      <right>Prawo</right>
+      <up>Gora</up>
+      <down>Dol</down>
+      <left_up>Lewa gora</left_up>
+      <right_up>Prawa gora</right_up>
+      <left_down>Lewy dol</left_down>
+      <right_down>Prawy dol</right_down>
+      <back>Powrot</back>
+
+      <exeadvancefunc>Execute</exeadvancefunc>
+      <exeorbitscan>Wykonaj</exeorbitscan>
+      <LoadPath>kliknij zeby zmienic sciezke</LoadPath>
+      <BufferTick_tip>Bufor</BufferTick_tip>
+	<idStreamType>Stream</idStreamType>
+    </Page>
+    <js>
+      <PlayerTips1>Wartosc szybkosci musi byc</PlayerTips1>
+      <PlayerTips2>Wartosc szybkosci musi byc liczba calkowita.</PlayerTips2>
+      <PlayerTips3>Ustawienie wstepne musi byc</PlayerTips3>
+      <PlayerTips4>Ustawienie wstepne musi byc liczba calkowita.</PlayerTips4>
+    </js>
+  </Resources>
+</Player>
+
+
+

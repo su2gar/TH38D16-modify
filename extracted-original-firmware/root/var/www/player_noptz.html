@@ -1,0 +1,469 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="common.js?v=2.0.2.4" type="text/javascript" charset="utf-8" ></script>
+<link rel="stylesheet"  href="playerstyle.css?v=2.0.2.4" />
+<style type='text/css' > 
+.playitemmenu  li
+{
+	position:relative;
+	display:block;
+	float:left;
+	width:47px;
+	height:46px;
+	cursor:pointer;
+	margin:0;
+	text-align:center;
+	color:#ffffff;
+	margin-top:12px;
+	margin-left:26px;
+} 
+.noptz_input_td 
+{
+	margin-top:5px;
+	margin-bottom:20px;
+} 
+.input_ptz_table tr td.noptz_input_td
+{
+	height:32px; 
+	vertical-align:top;	
+}  
+.input_ptz_table tr td.noptz_title_td
+{
+	height:26px; 
+	vertical-align:center;	
+} 
+</style>
+<title>play</title>
+</head> 
+
+<script type="text/javascript" >
+    var bntdefultbgimgae=47;
+    var havecall_backfunc=false;
+    function OnMouseDW(obj)
+    {
+        var isptz=obj.getAttribute("isptz");
+        if(isptz=="y")
+        {
+            OnPtzControl(obj);   
+        }
+        if(obj.id=="back")
+        {
+            if(!havecall_backfunc)
+            {
+                SendPtzCmd("<xml><cmd>auto</cmd><panspeed>5</panspeed><tiltspeed>5</tiltspeed></xml>"); 
+                havecall_backfunc=true;
+            }
+            else
+            {
+                SendPtzCmd("<xml><cmd>stop</cmd><panspeed>5</panspeed><tiltspeed>5</tiltspeed></xml>"); 
+                havecall_backfunc=false;
+            }
+        }
+        else if (obj.id=="FFar")
+        {
+            OnFocusFarAutoOff(obj);
+        }
+        else if (obj.id=="FNear")
+        {
+            OnFocusNearAutoOff(obj);
+        }
+        else if (obj.id=="IrisOpen")
+        {
+            OnIrisOpenAutoOff(obj);
+        }
+        else if (obj.id=="IrisClose")
+        {
+            OnIrisCloseAutoOff(obj);
+        }        
+        var bgimgsize=obj.getAttribute("bgimagewidth");
+        var hv=parseInt(bgimgsize);
+        if(isNaN(hv))
+        {
+            hv=bntdefultbgimgae;
+        }
+        var height=hv*2;
+        obj.style.backgroundPosition="0px -"+height+"px";// change button image
+    }
+    
+    
+    
+    function OnMouseOT(obj)
+    {
+        var bgimgsize=obj.getAttribute("curbgimage");
+        var hv=parseInt(bgimgsize);
+        if(isNaN(hv))
+        {
+            hv=bntdefultbgimgae;
+        }
+        var height=hv;
+        obj.style.backgroundPosition="0px -"+height+"px";
+    }
+    
+    function OnMouseOV(obj)
+    {
+        var bgimgsize=obj.getAttribute("bgimagewidth");
+        var hv=parseInt(bgimgsize);
+        if(isNaN(hv))
+        {
+            hv=bntdefultbgimgae;
+        }
+        var height=hv;
+        obj.style.backgroundPosition="0px -"+height+"px";
+    }
+    
+    function OnMouseUUP(obj)
+    {
+        var isptz=obj.getAttribute("isptz");
+        if(isptz=="y" || obj.id=="FFar" || obj.id=="FNear" || obj.id=="IrisOpen" || obj.id=="IrisClose")
+        {
+            OnPtzStop(obj);   
+        }
+        var bgimgsize=obj.getAttribute("bgimagewidth");
+        var hv=parseInt(bgimgsize);
+        if(isNaN(hv))
+        {
+            hv=bntdefultbgimgae;
+        }
+        var height=hv;
+        obj.style.backgroundPosition="0px -"+height+"px";
+    }    
+    var PresetArr = new Array();
+    
+//--------------
+function js_ExeObritScan(ocx_id, chkbox_id)
+{
+	var BtnObritScan = document.getElementById(ocx_id);
+	var chkObritScan = document.getElementById(chkbox_id);
+	BtnObritScan.value = chkObritScan.value;
+	BtnObritScan.click();
+}
+
+function js_AddPreset(ocx_id, editbox_id)
+{
+	var BtnAddPreset = document.getElementById(ocx_id);
+	var EditBox = document.getElementById(editbox_id);
+	BtnAddPreset.value = EditBox.value;
+	BtnAddPreset.click();
+}
+
+function js_DelPreset(ocx_id, option_id)
+{
+    var BtnDelPreset = document.getElementById(ocx_id);
+    var SelDelPreset = document.getElementById(option_id);
+    BtnDelPreset.value = SelDelPreset.options.value;
+    BtnDelPreset.click();
+}
+
+
+function js_CallPreset(ocx_id, option_id)
+{
+    var BtnCallPreset = document.getElementById(ocx_id);
+    var SelCallPreset = document.getElementById(option_id);
+    var nodevalue=SelCallPreset.value;
+    BtnCallPreset.value = nodevalue;//.options.value;
+    BtnCallPreset.click();
+}
+ 
+
+var IntervalID=0;
+var g_szLan = null;
+var g_lanxXmlDoc = null;
+function UnInitPage()
+{   
+    window.clearInterval(IntervalID);
+}
+</script>
+
+
+<body    ondragstart="try{CancleEvent();}catch(eevv){}"  onselect="try{SelectNothing();}catch(eevv){}"   onselectstart="try{CancleEvent();}catch(eevv){}"     OnUnLoad="try{UnInitPage();}catch(eevv){}"  bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="text-align:center;position:relative; margin:auto;"  >
+
+
+<table width="99.4%"  height="99.4%" cellpadding="0" cellspacing="0" border="0"  style="position:relative;" >
+    <tr>
+        <td align="center" valign="top"   >
+		
+			<table   id="play_table" width="1000" height="670" border="0" cellpadding="0" cellspacing="0"  style="background:url(images/mainbg.jpg?v=1.0.0.17);position:relative;"  >
+
+<tr>
+        <td  id="BGTitle"    style="height:70px;width:100%;" >
+            <ul   class="menulist" style="text-align:right;"  >
+                <!--li style="float:left; width:200px; margin:0px; padding-top:12px;" class="logo" >
+                    <img src="images/play_01.gif?v=1.0.0.16" style="width:180px; height:56px;"  />
+                </li-->
+                <li  style="float:left; width:440px; margin:0px; padding-top:12px;" class="logo" >
+                    <div id="BGlogo"  style="width:406px; height:61px;"  ></div>
+                </li> 
+
+
+               
+
+
+                <li>        
+                    <div   id="exitlogin"  class="exitlogin"   
+                        onmousedown="OnMouseDW(this);"
+                        onmouseout="OnMouseOT(this);" 
+                        onmouseover="OnMouseOV(this);" 
+                        onmouseup="OnMouseUUP(this);"  bgimagewidth="56" curbgimage="0" ></div>
+                        <span> <label id="idQuit"  style="display:inline; overflow:hidden; width:60px;"  >退出</label> </span>                </li> 
+                
+                <li id="cfgli_id" >
+                    <div id="configipc"  class="configbnt"   
+                        onmousedown="OnMouseDW(this);"
+                        onmouseout="OnMouseOT(this);" 
+                        onmouseover="OnMouseOV(this);" 
+                        onmouseup="OnMouseUUP(this);" bgimagewidth="56" curbgimage="0" ></div>
+                <span><label  id="idCameraConfig"  style="display:inline; overflow:hidden; width:60px;"   >配置</label> </span></li>
+                
+                <li id="playbackli_id" >
+                    <div id="playback"  class="playbackbnt"   
+                        onmousedown="OnMouseDW(this);"
+                        onmouseout="OnMouseOT(this);" 
+                        onmouseover="OnMouseOV(this);" 
+                        onmouseup="OnMouseUUP(this);" bgimagewidth="56" curbgimage="0" ></div>
+                    <span > <label id="idPlayBack" style="display:inline; overflow:hidden; width:60px;"  >回放</label> </span></li>
+          </ul>        
+		</td>	
+    </tr>
+<!-- end of title -->
+ 
+	<tr>
+		<td valign="top" >
+			<table  cellpadding="0" cellspacing="0" border="0" style="height:590px; width:100%; margin:0px 0px 0px 0px; vertical-align:top;"  >
+				  <tr>
+					<td valign="middle" >
+					<!-- play video area -->
+						<table  id="IDPlayPict"  style="height:585px; width:885px;margin:8px 0px 0px 5px;" cellpadding="0" cellspacing="0" border="0" >
+						  <tr>
+							<td  style="background:url(images/videoleft.jpg?v=1.0.0.17);background-repeat:no-repeat; width:6px; font-size:1px;" >&nbsp;</td>
+							<td   style="background:url(images/videomiddle.jpg?v=1.0.0.17); background-repeat:repeat-x; width:752px;"  >&nbsp;</td>
+							<td  style="background:url(images/videoright.jpg?v=1.0.0.17);background-repeat:no-repeat;width:9px;font-size:1px;"  >&nbsp;</td>
+						  </tr>
+					  </table>					</td>
+					
+					
+					<td  id="ptzbg_ctrl" style="background:url(images/noptzbg.jpg?v=1.0.0.17);width:110px; text-align:center; vertical-align:top;"  >
+					
+					<table cellpadding="0" cellspacing="0" border="0" style="width:100%;" >
+                      <tr>
+                        <td  class="playitemmenu"  style="text-align:center;"  style="height:290px;" ><!-- this table for ie center  -->
+                            <li  id="PlayRealVideo"  class="playbntsmall"  onMouseDown="OnMouseDW(this);"
+									onMouseOut="OnMouseOT(this);" onMouseOver="OnMouseOV(this);" 
+									onMouseUp="OnMouseUUP(this);"  bgimagewidth="47" curbgimage="0"  title="播放视频"   ></li>
+                                    <li  id="StopPlayReal"  class="stopbnt"  onMouseDown="OnMouseDW(this);"
+									onMouseOut="OnMouseOT(this);" onMouseOver="OnMouseOV(this);" 
+									onMouseUp="OnMouseUUP(this);"  bgimagewidth="47" curbgimage="0"  title="停止播放"   ></li>
+                                  <li  id="SnapPicture"  class="capbnt"  onMouseDown="OnMouseDW(this);"
+									onMouseOut="OnMouseOT(this);" onMouseOver="OnMouseOV(this);" 
+									onMouseUp="OnMouseUUP(this);"  bgimagewidth="47"  curbgimage="0"  title="抓拍"  ></li>
+                                  <li  id="RealRecord"  class="recordbnt"  onMouseDown="OnMouseDW(this);"
+									onMouseOut="OnMouseOT(this);" onMouseOver="OnMouseOV(this);" 
+									onMouseUp="OnMouseUUP(this);"  bgimagewidth="47" curbgimage="0"  title="录像"  ></li>
+                                  <li  id="Talkback"  class="autiobnt" onMouseDown="OnMouseDW(this);"
+									onMouseOut="OnMouseOT(this);" onMouseOver="OnMouseOV(this);" 
+									onMouseUp="OnMouseUUP(this);"  bgimagewidth="47" curbgimage="0" title="对讲"  ></li>
+						 </td>
+                      </tr>
+                      <tr>
+                        <td style="height:24px;" >&nbsp;</td>
+                      </tr> 
+                      <tr>
+                        <td>
+							<table cellpadding="0" cellspacing="0" border="0"   class="input_ptz_table"  >
+                            <tr>
+                              <td  colspan="3"  style="width:50px;" class="noptz_title_td" ><div style="display:inline; overflow:hidden; width:50px;font-size:12px;height:16px;">
+                                  <label id="idSavePath"  >存储路径</label>
+                                </div> 
+							</td>
+							<td><li  id="LoadPath" style="background:url(images/menu/configbnt.gif?v=1.0.0.17); width:24px; height:26px;" onMouseDown="OnMouseDW(this);"
+						onMouseOut="OnMouseOT(this);" onMouseOver="OnMouseOV(this);" onMouseUp="OnMouseUUP(this);"  bgimagewidth="26" curbgimage="0" title=""  ></li></td>
+							<td colspan="2" style="width:30px" ></td>
+							</tr>
+							<tr>
+                              <td  colspan="6"   class="noptz_input_td"   ><div style="width:105px; overflow:hidden; text-align:left; background-image: url(images/lujing_bg.gif?v=1.0.0.17); height: 20px;"  >
+                                  <div id="showdirdiv" style="font-size:14px;width:99999px;overflow:hidden; display:inline;" title="c:\" > c:\ </div>
+                              </div></td> 
+                            </tr>
+                            <tr>
+                              <td   colspan="6"  style="width:50px;" align="left" class="noptz_title_td" ><div style="display:inline;text-algin:right; overflow:hidden;height:16px; width:50px;font-size:12px;">
+                                  <label id="idStreamType" style='text-algin:right;'  >播放码流</label>
+                                </div>                              
+							   </td>
+							</tr>
+							<tr>
+                              <td  colspan="6"  class="noptz_input_td"  ><select name="select2" class="a" id="idChangeStream" style="width:85px; height: 20px;" title="码流" onChange="OnChangeStream(this.value);">
+                                  <!--option id="idMainStream" value="0" >主码流</option-->
+                                  <!--option id="idSubStream" value="1" >子码流</option-->
+                                </select>                              </td>
+                            </tr>
+							 
+							<tr>
+                                          <td  colspan="6" width="50px" align="left" class="noptz_title_td"  ><label id="BufferTick_tip" style="font-size:12px;"    >缓冲</label>                                          </td>
+							</tr>
+							<tr>
+								 <td  colspan="6"   class="noptz_input_td"   ><select name="bufferTick" class="a" id="bufferTick" onChange="OnChangeBufferTick(this.value);" style="width:85px; height:20px;" >
+                                              <option value="50" >50</option>
+                                              <option value="100" >100</option>
+                                              <option value="200" >200</option>
+                                              <option value="300" selected="selected" >300</option>
+                                              <option value="400" >400</option>
+                                              <option value="500" >500</option>
+                                              <option value="800" >800</option>
+                                              <option value="1000" >1000</option>
+                                            </select>                                         
+								</td>
+							</tr>
+                        </table>
+						</td>
+                      </tr>
+                      <tr>
+                        <td>
+						
+						</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                      </tr>
+                    </table></td>
+					
+					
+					<td style="width:5px;font-size:2px;" >&nbsp;</td>
+				  </tr>
+			</table>		
+		</td>
+	</tr>
+</table>
+
+        </td>
+    </tr>
+</table>
+
+
+<input type="hidden"  id="PtzControl" />
+<input type="hidden"  id="FocusFarAutoOff" />
+<input type="hidden"  id="FocusNearAutoOff" />
+<input type="hidden"  id="IrisOpenAutoOff" />
+<input type="hidden"  id="IrisCloseAutoOff" />
+<input type="hidden"  id="ExecuteOrbitScan" />
+<input type="hidden"  id="AddPreset" />
+<input type="hidden"  id="DelPreset" />
+<input type="hidden"  id="CallPreset" />
+<input type="hidden"  id="InitStreamType" />
+<input type="hidden"  id="BufferTickChange" value='100' />
+ 
+ 
+ 
+<script type="text/javascript" > 
+
+
+    function OnChangeBufferTick(va)
+    {
+        var obj=document.getElementById('BufferTickChange');
+        obj.value=va;
+        CallClickButton('BufferTickChange');
+    }
+
+    
+    function InitLanguage()
+    {
+    	InitPlayerLanguage('./xml/Player.xml');
+    	var lan=g_szLan;
+        var ss = document.getElementById("BGlogo"); 
+        if (lan == "en-us") 
+        { 
+            ss.style.backgroundImage="url(images/logo_en_null.gif?v=1.0.0.17)";
+        }
+        else if(lan == "zh-cn")
+        {  
+            ss.style.backgroundImage="url(images/logo_cn_null.gif?v=1.0.0.17)";
+        }
+        else if(lan == "zh-tw")
+        { 
+            ss.style.backgroundImage="url(images/logo_tw_null.gif?v=1.0.0.17)";
+        }
+        else if(lan == "ru-ru")
+        {  
+            ss.style.backgroundImage="url(images/logo_rs_null.gif?v=1.0.0.17)";
+        }
+        else
+        {  
+            ss.style.backgroundImage="url(images/logo_en_null.gif?v=1.0.0.17)";
+        }
+    }
+    
+    
+    
+	function ChangePresetNode(obj,toid)
+	{
+		try
+		{
+			document.getElementById(toid).value=obj.value;
+			document.getElementById("inputgotopreset2").value=obj.value;
+		}catch(eevv){}
+	}
+
+    function OnPresetListChange(strlist)
+    {
+        var objitem=document.getElementById("Call_PresetListChkBox");
+        ChangePresetNode(objitem,"inputgotopreset2");
+    }
+
+    
+    function InitPage()
+    {
+		havecall_backfunc=false;
+        InitLanguage();
+        window.clearInterval(IntervalID);
+        IntervalID = window.setInterval(function(){OnStateChange();}, 500);
+    }
+    
+    
+    
+    function scfEvent(nCode)
+    {//call back function 
+		DoDefPlayerPageCallBackAction(nCode);
+    }
+    
+    function PlayVideoStream(nstream)
+    {
+        try
+        {
+			GetViewType();
+			if(!g_isIe11Viewer)
+			{
+				DisplayVideo("IDPlayPict",nstream,scfEvent);
+			}
+			else
+			{
+				DisplayVideo("IDPlayPict",nstream,"scfEvent");
+			}
+        }
+        catch(eee)
+        {
+            ShowError(eee);
+        }
+    }
+     
+    
+    function OnChangeStream(va)
+    {
+        PlayVideoStream(va);
+    }
+        
+    function LoadStreamType()
+    {
+        InitLanguage();    
+    }
+	
+	
+    InitPage();
+    LoadDefaultStreamType();// 显示要播放的默认流 
+    PlayVideoStream(-1);
+</script>
+
+</body>
+</html>
+
+
+
+

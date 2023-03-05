@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Login>
+  <Resources lan="zh-cn" name='简体中文'>
+  	 <Page>
+		<title>网络高清摄像机</title>
+		<lusername>用户账户</lusername>
+		<lpassword>用户密码</lpassword>
+		<tdLanguage>选择语言</tdLanguage>
+		<LoginButton>登录</LoginButton>
+		<DownloadButton>安装控件</DownloadButton>
+		<logo_img>images/logo-zh-cn.jpg?v=1.0.0.16</logo_img>
+		</Page>
+  	<js>
+		<LoginTips1>账号不能为空</LoginTips1>
+		<LoginTips2>账号或密码错误</LoginTips2>
+		<LoginTips3>登录失败</LoginTips3>
+		<htmllogin_passisempty>密码不能为空.</htmllogin_passisempty>
+		<htmllogin_ctrlversionerror1>控件与固件发布不兼容，请重新下载安装！</htmllogin_ctrlversionerror1>
+		<htmllogin_ctrlversionerror>控件与发布固件时不相同，建议重新下载安装！</htmllogin_ctrlversionerror>
+		<htmllogin_ctrlhavenewversion>控件有可升级的新版本，建议重新下载并安装！</htmllogin_ctrlhavenewversion>
+		<networdk_connecterror>网络连接错误，请检测设备是否已连接！</networdk_connecterror>
+		<networdk_user_connecterror>用户登录错误，请检测用户或密码是否正确！</networdk_user_connecterror>
+		<userlogin_waitinfo>用户登录中...</userlogin_waitinfo>
+  	</js>
+  </Resources>
+ 
+  
+  <Resources lan='zh-tw' name='繁體中文'>
+    <Page>
+	<title>網路高畫質攝影機</title>
+	<lusername>用戶帳號</lusername>
+	<lpassword>用戶密碼</lpassword>
+	<tdLanguage>選擇語言</tdLanguage>
+	<LoginButton>登入</LoginButton>
+	<DownloadButton>安裝控件</DownloadButton>
+	<logo_img>images/logo-zh-tw.jpg?v=1.0.0.16</logo_img>
+    </Page>
+    <js>
+	<LoginTips1>帳號不能為空白</LoginTips1>
+	<LoginTips2>帳號或密碼錯誤</LoginTips2>
+	<LoginTips3>登入失敗</LoginTips3>
+	<htmllogin_passisempty>密碼不能為空白</htmllogin_passisempty>
+	<htmllogin_ctrlversionerror1>控件與發行韌體版本不相容,請重新下載安裝!</htmllogin_ctrlversionerror1>
+	<htmllogin_ctrlversionerror>控件與發行認體版本不一致,可能會不相容,建議重新下載安裝!</htmllogin_ctrlversionerror>
+	<htmllogin_ctrlhavenewversion>控件有新發行版本,建議重新下載安裝!</htmllogin_ctrlhavenewversion>
+
+	<networdk_connecterror>網路連接失敗,請檢查設備是否已經正確連接.</networdk_connecterror>
+	<networdk_user_connecterror>用戶登入錯誤,請檢查用戶名稱或密碼是否正確﹝</networdk_user_connecterror>
+	<userlogin_waitinfo>用戶認證中...</userlogin_waitinfo>
+    </js>
+  </Resources>
+  
+  
+   <Resources lan='en-us' name='English'>
+  	 <Page>
+		<title>IP Camera</title>
+		<lusername>Username</lusername>
+		<lpassword>Password</lpassword>
+		<tdLanguage>Language</tdLanguage>
+		<LoginButton>Login</LoginButton>
+		<DownloadButton>Install</DownloadButton>
+		<logo_img>images/logo-en-us.jpg?v=1.0.0.16</logo_img>
+  	</Page>
+  	<js>
+		<LoginTips1>Please enter the username.</LoginTips1>
+		<htmllogin_passisempty>Please enter the password.</htmllogin_passisempty>
+		<LoginTips2>User name or password is incorrect, Please enter again.</LoginTips2>
+		<LoginTips3>Login failed.</LoginTips3>
+		<htmllogin_ctrlversionerror1>The control version is different,recommend reinstalling!</htmllogin_ctrlversionerror1>
+		<htmllogin_ctrlversionerror>The control version is different,please reinstall!</htmllogin_ctrlversionerror>
+		<htmllogin_ctrlhavenewversion>The control has new version was available.</htmllogin_ctrlhavenewversion>
+		<networdk_connecterror>Network connection error, please make sure that device is connect!</networdk_connecterror>
+		<networdk_user_connecterror>User login error, username or password is error!</networdk_user_connecterror>
+		<userlogin_waitinfo>User login...</userlogin_waitinfo>
+  	</js>
+  </Resources>
+  
+  
+  <Resources lan='ru-ru' name='русский'>
+  	<Page>
+		<title>NV HD IP Камера</title>
+		<lusername>Логин</lusername>
+		<lpassword>Пароль</lpassword>
+		<tdLanguage>Язык</tdLanguage>
+		<LoginButton>Авторизация</LoginButton>
+		<DownloadButton>Установка ПО</DownloadButton>
+		<logo_img>images/logo-en-us.jpg?v=1.0.0.16</logo_img>
+  	</Page>
+  	<js>
+		<LoginTips1>Аккаунт не может пустым</LoginTips1>
+		<LoginTips2>Неверное имя или пароль</LoginTips2>
+		<LoginTips3>Ошибка авторизации</LoginTips3>
+		<htmllogin_passisempty>Пароль не может быть пустым</htmllogin_passisempty>
+		<htmllogin_ctrlversionerror1>The control version is different,recommend reinstalling!</htmllogin_ctrlversionerror1>
+		<htmllogin_ctrlversionerror>The control version is not compatible,please reinstall!</htmllogin_ctrlversionerror>
+		<htmllogin_ctrlhavenewversion>The control has new version was available.</htmllogin_ctrlhavenewversion>
+		<networdk_connecterror>Network connection error, please make sure that device is connect!</networdk_connecterror>
+		<networdk_user_connecterror>User login error, username or password is error!</networdk_user_connecterror>
+		<userlogin_waitinfo>User login...</userlogin_waitinfo>
+    </js>
+  </Resources>
+
+
+
+  <Resources lan='tr-tr' name='Turkçe'>
+    <Page>
+      <title>IP Camera</title>
+      <lusername>Kullanıcı</lusername>
+      <lpassword>Şifre</lpassword>
+      <tdLanguage>Lisan</tdLanguage>
+      <LoginButton>Giriş</LoginButton>
+      <DownloadButton>Kurulum</DownloadButton>
+      <logo_img>images/logo-en-us.jpg?v=1.0.0.16</logo_img>
+    </Page>
+    <js>
+      <LoginTips1>Kullanıcı Adı Giriniz.</LoginTips1>
+      <htmllogin_passisempty>Şifrenizi Giriniz.</htmllogin_passisempty>
+      <LoginTips2>Kullanıcı Yada Şifreniz Yanlış,Tekrar Girniz.</LoginTips2>
+      <LoginTips3>Giriş Başarısız.</LoginTips3>
+      <htmllogin_ctrlversionerror1>The control version is different,recommend reinstalling!</htmllogin_ctrlversionerror1>
+      <htmllogin_ctrlversionerror>Lütfen Versiyon kontrol ediniz ,Lütfen Kontrol edip tekrar deneyiniz!</htmllogin_ctrlversionerror>
+      <htmllogin_ctrlhavenewversion>The control has new version was available.</htmllogin_ctrlhavenewversion>
+      <networdk_connecterror>Network connection error, please make sure that device is connect!</networdk_connecterror>
+      <networdk_user_connecterror>User login error, username or password is error!</networdk_user_connecterror>
+      <userlogin_waitinfo>User login...</userlogin_waitinfo>
+    </js>
+  </Resources>
+
+
+  
+
+  <Resources lan='pl-pl' name='Polska' >
+    <Page>
+      <title>Kamera IP</title>
+      <lusername>Nazwa uzytkownika</lusername>
+      <lpassword>Haslo</lpassword>
+      <tdLanguage>Jezyk</tdLanguage>
+      <LoginButton>Zaloguj</LoginButton>
+      <DownloadButton>Zainstaluj</DownloadButton>
+      <logo_img>images/logo-en-us.jpg</logo_img>
+    </Page>
+    <js>
+      <LoginTips1>Wprowadz nazwe uzytkownika</LoginTips1>
+      <htmllogin_passisempty>Prosze wpisac haslo</htmllogin_passisempty>
+      <LoginTips2>Nazwa uzytkownika lub haslo nieprawidlowe. Sprobuj ponownie</LoginTips2>
+      <LoginTips3>Blad logowania</LoginTips3>
+      <htmllogin_ctrlversionerror1>Inna wersja kontrolera. Zalecana ponowna instalacja!</htmllogin_ctrlversionerror1>
+      <htmllogin_ctrlversionerror>Inna wersja kontrolera. Zainstaluj ponownie!</htmllogin_ctrlversionerror>
+      <networdk_connecterror>Blad polaczenia.Sprawdz polaczenie urzadzenia!</networdk_connecterror>
+      <networdk_connecterror>Blad logowania. Bledna nazwa uzytkownika lub haslo</networdk_connecterror>
+      <userlogin_waitinfo>Logowanie uzytkownika.....</userlogin_waitinfo>
+    </js>
+  </Resources>
+</Login>
+
+

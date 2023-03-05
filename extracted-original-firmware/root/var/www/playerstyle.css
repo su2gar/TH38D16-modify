@@ -1,0 +1,166 @@
+body
+{ 
+    width:1007px;
+    color:#cccccc;  
+    padding:0 0 0 0; 
+    margin:auto;  
+}
+
+ .scrollable
+ {
+   overflow: auto;
+   width: 70px; /* adjust this width depending to amount of text to display */
+   height: 80px; /* adjust height depending on number of options to display */
+   border: 1px silver solid;
+ }
+ .scrollable select{border: none;}
+
+.playbnt {    background:url(images/menu/main_bofang.gif?v=2.0.0.14);  }
+
+
+
+.playbackbnt {    background:url(images/menu/main-huifang.gif?v=2.0.0.14);  }
+
+
+#ptz_inputac_td  table tr td {	height:30px; }
+
+
+.configbnt {    background:url(images/menu/main_sezi.gif?v=2.0.0.14);  }
+
+
+
+.exitlogin{    background:url(images/menu/main_tuichu.gif?v=2.0.0.14);  }
+
+.menulist
+{
+    text-align:right;
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+    background:url(images/play_01.gif?v=2.0.0.14);
+    width:1007px;
+    height:65px;
+}
+
+.menulist li
+{
+	position:relative;
+	display:block;	
+	float:right;
+	width:56px;
+	height:65px;
+	cursor:pointer;
+	margin:2 2 2 2;
+    text-align:center; 
+    color:#ffffff;
+    font-size:14px;
+    margin-right:8px;
+}
+
+
+.menulist  li div{	width:56px;	height:56px;}
+
+
+
+.playitemmenu{    text-align:center;}
+
+
+li {	position:relative;	display:block;		float:left; }
+
+
+.playbntsmall{    background:url(images/menu/baofang.gif?v=2.0.0.14); }
+.stopbnt{    background:url(images/menu/tingzhi.gif?v=2.0.0.14); }
+.capbnt{    background:url(images/menu/paizhao.gif?v=2.0.0.14); }
+.recordbnt{    background:url(images/menu/luxiang.gif?v=2.0.0.14); }
+.autiobnt{    background:url(images/menu/duijiang.gif?v=2.0.0.14); }
+
+.ptzposition 
+{
+    width:130px;
+    text-align:center;
+    height:130px;
+	margin:0px;
+	padding:0px;
+}
+
+.ptzposition ul{	margin:0px;	padding:0px;}
+
+.ptzposition ul li
+{
+	width:42px;
+	height:44px;
+	position:relative;
+	display:block;
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+
+.presetmenu 
+{
+    width:100px;
+    text-align:center;
+    height:130px;
+	margin:0px;
+	padding:0px;
+}
+
+.presetmenu ul{	margin:0px;	padding:0px;	display:block;}
+
+
+
+.presetmenu ul li
+{
+	width:40px;
+	height:43px;
+	position:relative;
+	display:block;
+	float:left;
+	margin:0px;
+	padding:0px;
+}
+
+
+.presetmenu ul  .presettext{	width:10px;	font-size:2px;}
+
+.alarmtable
+{
+    font-size:12px;
+    border-top:solid 1 #cccccc;
+    border-left:solid 1 #cccccc;
+    border-bottom:solid 1 #cccccc;
+    width:220px;
+    height:110px;
+    margin-left:5px;
+}
+  
+ 
+.alarmtable tr th
+{
+    font-weight:bold;
+    font-size:14px;
+    border-right:solid 1 #cccccc;
+    text-align:center;
+}
+
+.alarmtable tr td
+{
+    border-right:solid 1 #cccccc;
+    border-top:solid 1 #cccccc;
+    padding-left:4px;
+}
+
+
+#alarmbody div{    overflow-y:scroll;    width:220px;    height:80px;} 
+
+.a {	font-size: 12px;	color: #666;}
+.b {	font-size: 12px;	color: #CCC;}
+
+#apDiv1 {
+	position:absolute;
+	width:253px;
+	height:149px;
+	z-index:1;
+	left: 916px;
+	top: 495px;
+	background-image: url(images/gaojing_bg.gif?v=2.0.0.14);
+}

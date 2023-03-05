@@ -1,0 +1,5 @@
+body{	padding:auto;	margin:auto;}
+a:link{    margin: auto;    color: #0000FF;    text-decoration: none;    word-spacing: 0;    text-indent: 0; }
+a{	vertical-align:middle; }
+a:visited{    margin: 0;    color: #0000FF;    text-decoration: none;    word-spacing: 0;    text-indent: 0; }
+a:hover{	margin: 0px;	color: #ed6c00;	word-spacing: 0;	text-indent: 0; }

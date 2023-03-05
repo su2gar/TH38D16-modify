@@ -1,0 +1,610 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<script src="common.js?v=2.0.2.4" type="text/javascript"  charset="utf-8"  ></script>
+<title></title>
+<style type="text/css" >  
+.inputext
+{
+    border:1px solid #333333;
+    font-size:12px;
+    width:155px;
+    height:24px;
+    color:#000000;
+}
+
+
+
+a:link
+{
+    margin: 0px;
+    color: #0000FF;
+    text-decoration: none;
+    word-spacing: 0;
+    text-indent: 0; 
+}
+
+
+a
+{
+	vertical-align:middle; 
+}
+
+a:visited
+{
+    margin: 0;
+    color: #0000FF;
+    text-decoration: none;
+    word-spacing: 0;
+    text-indent: 0; 
+}
+
+
+a:hover
+{
+	margin: 0px;
+	color: #ed6c00;
+	word-spacing: 0;
+	text-indent: 0; 
+}
+
+
+
+.showitemfont
+{
+    font-size:14px;
+    color:#ffffff;
+}
+
+.selectitem
+{
+    font-size:12px;
+    border:1px solid #000000;
+}
+
+ 
+
+
+.divbutton
+{
+	margin:0 auto;
+	vertical-align:middle;
+	float:left;
+	background-image:url(images/button100.gif?v=1.0.0.17&ty=reg);
+   	background-position: 0px 0px;
+	height:28px;
+	line-height:26px;
+	cursor:pointer;	
+	width:100px;
+	color:#000000;
+	margin-right:2px;
+	text-align:center;	
+}
+ 
+.tiplabelcolor
+{
+    color:#000000;
+    text-align:right; 
+}
+ 
+
+</style>
+</head> 
+<body  bgcolor="#FFFFFF" leftmargin="0" topmargin="0"    marginwidth="0" marginheight="0" style="text-align:center; margin:auto;"   >
+<input type="hidden" value="" id="idCallBack" />
+<input type="hidden" value="" id="idPTZPort" />
+<input type="hidden" value="" id="Logon" />
+<input type="hidden" value="" id="selectchange" />
+<input type="hidden" value="" id="ctrl_version" />
+<table  width="100%" height="99.6%"   border="0" cellspacing="0" cellpadding="0">
+<tr><td  width="100%" height="100%" align="center" valign="middle" >
+
+
+
+<table  style="background:url(images/login.jpg?v=1.0.0.17&ty=reg); width:996px; height:600px;" border="0" cellpadding="0" cellspacing="0"   >
+<tr>
+<td>
+    
+    <table cellpadding="0" cellspacing="0" border="0"  >
+            <tr>
+                <td style="height:167px; width:280px;" >&nbsp;</td>
+                <td style="width:200px;" >&nbsp;</td>
+                <td style="width:220px;" >&nbsp;</td>    
+                <td style="width:260px;" >&nbsp;</td>                 
+            </tr>
+            <tr >
+                <td style="height:60px;" >&nbsp;</td>
+                <td colspan="2" valign="top" >
+                <img src="images/logo-en-us.jpg?v=1.0.0.17&ty=reg" id="logo_img"  border="0"  />                
+                </td>
+                <td>&nbsp;</td>                 
+            </tr>
+            <tr>
+                <td  style="height:140px;" >&nbsp;</td>
+                <td colspan="2"  >
+                
+                <table cellpadding="0" cellspacing="0"  >
+                    <tr>
+                            <td style="width:160px;"  align="right" > 
+                                <label id="lusername"  class="tiplabelcolor"  >&nbsp;</label>
+                            </td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td style="width:280px;">
+                                <input id="username" maxlength="30" class="inputext"   value=""   tabindex="1" onblur="ChangeItem(1,this,this.value);"  />
+                            </td>
+                            <td></td>
+                    </tr>
+                    <tr>
+                            <td align="right"  style="width:160px;"  >
+                                <label id="lpassword"   class="tiplabelcolor"  >&nbsp;</label>
+                            </td>
+                            <td>&nbsp;&nbsp;&nbsp;</td>
+                            <td> 
+                             <input id="password" maxlength="30" class="inputext"   type="password" value=""   onblur="ChangeItem(2,this,this.value);"    tabindex="2"  />                        
+                            </td>
+                            <td></td>
+                    </tr>   
+                    
+                    <tr>
+                        <td style="height:36px;" >&nbsp;</td>
+                         <td>&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                                                
+                        <label style="margin-left:60px;"    class="divbutton" 
+                        onmousedown="OnMouseDW(this);"
+                        onmouseout="OnMouseOT(this);" 
+                        onmouseover="OnMouseOV(this);" 
+                        onmouseup="OnMouseUUP(this);"   id="LoginButton"  onclick="DoLogin();"   onblur="ChangeItem(3,this,this.value);"      >Login</label>
+                                
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+						<td colspan="4" align="left" style="padding: 15px 0 0 95px; color: red">
+							<div id="tipinfo_div" style="font-size: 14px"></div>
+						</td>
+                    </tr>
+                                 
+                </table> 
+                </td>    
+                <td>&nbsp;</td>                 
+            </tr>
+            <tr>
+                <td style="height:60px;" >&nbsp;</td>
+                <td colspan="2">                
+                  <table class="showitemfont" >
+                        <tr>
+                        <td style="width:60px;">
+                         &nbsp;
+                        </td>
+                        <td style="width:140px;"> 
+                            <a id="DownloadButton"  href="http://update.seetong.com/files/ocx/ipc/h265/IPCConfig.exe?version=2.0.2.4.exe" target="_blank"  >&nbsp;</a>
+                        </td> 
+                        <td id="tdLanguage"  class="tiplabelcolor" style="width:120px;"  >
+                           &nbsp;
+                        </td>
+                        <td>
+                            <select class="selectitem" id="idLanguage"  onchange="OnChangeLangSel(this.value,'./xml/Login.xml');"  style="WIDTH: 80px; HEIGHT: 20px">
+                            </select>
+                        </td>
+                        </tr> 
+                </table>
+                </td>    
+                <td>&nbsp;</td>                 
+            </tr>
+            <tr>
+                <td style="height:160px;" >&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>    
+                <td>&nbsp;</td>                 
+            </tr>
+    </table>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+
+
+if (document.layers)
+{
+    document.captureEvents(Event.KEYPRESS);
+}
+
+
+function OnTabKeyEventAction()
+{
+   if (document.activeElement == document.getElementById("username"))
+   {
+        document.getElementById("password").focus();
+   }
+   else if (document.activeElement == document.getElementById("password"))
+   {
+        document.getElementById("LoginButton").focus();
+   }
+   else if (document.activeElement == document.getElementById("LoginButton"))
+   {
+        document.getElementById("username").focus();
+   }
+   else
+   {
+        //document.getElementById("LoginButton").focus();
+        DoLogin();
+   }
+}
+
+
+function backhome(e)
+{
+    try
+    {
+        var KeyID = (window.event) ? event.keyCode : e.keyCode;
+        if (KeyID == 9)
+        {
+            OnTabKeyEventAction();
+        }
+        else if(KeyID==13)
+        {//回车
+            if (document.activeElement == document.getElementById("password"))
+            {
+                var un = document.getElementById("username");
+                var pw = document.getElementById("password");
+                if(un.value!="" && pw.value!="")
+                {
+                    DoLogin();
+                }
+            }
+            OnTabKeyEventAction();
+        }
+    }
+    catch(eevv)
+    {
+	
+    }
+}
+document.onkeypress=backhome;
+
+
+function OnTabKeyDown(keyval,actype)
+{
+    OnTabKeyEventAction();
+    return true;
+}
+
+    
+function LoginCallBack(strCode)
+{
+    var Tips2 = getNodeValue("LoginTips2");
+    var Tips3 = getNodeValue("LoginTips3");
+    var nCode=Math.floor(strCode);
+    switch (nCode)
+    {
+    case 4:
+        {
+            //document.location.href="player.html";
+        }
+        break;
+    case 5:
+    case 2:
+    case 3:
+    case 31:
+    {
+            if(2==nCode || 3==nCode)
+            {
+                var networkerror=getNodeValue("networdk_connecterror");
+                 ShowErrorTip(networkerror);
+            }
+            else if(5==nCode)
+            {
+                var userlogin_error=getNodeValue("userlogin_error");
+                 ShowErrorTip(userlogin_error);
+            }
+            else if(31==nCode)
+            {
+                var userlogin_error=getNodeValue("LoginTips2");
+                 ShowErrorTip(userlogin_error);            
+            }
+            var un = document.getElementById("username");
+            var pw = document.getElementById("password");
+            pw.setAttribute("value", "");
+            //un.setAttribute("value", "");
+            pw.focus();
+    }
+    case 2000:
+    case 1000://没有自动登录
+        {
+            try
+            {
+                document.getElementById("__01").style.display="block";
+            }
+            catch(eee)
+            {
+                ShowError(eee);
+            }
+            var un = document.getElementById("username");
+            var pw = document.getElementById("password");
+            pw.setAttribute("value", "");
+            try
+            {
+                if(un.value!="")
+                {
+                    pw.focus();
+                }
+                else
+                {
+                    un.focus();
+                }
+            }
+            catch(eee)
+            {
+                ShowError(eee);
+            }
+            try
+            {             
+                if(nCode==2000)
+                {// only for admin user  
+                        document.getElementById("username").value="admin";
+                        document.getElementById("username").style.display="none";   
+                        document.getElementById("admin_label").style.display="block";    
+                }
+                else
+                {
+                    document.getElementById("username").style.display="block";   
+                    document.getElementById("admin_label").style.display="none"; 
+                }
+            }
+            catch(eee)
+            {
+                ShowError(eee);
+            }
+        }
+        break;
+    }
+}
+
+function DownloadCtrl()
+{
+     window.location="http://update.seetong.com/files/ocx/ipc/h265/IPCConfig.exe?version=2.0.2.4.exe";
+}
+
+
+
+function ShowErrorTip(msg)
+{
+    try
+    {
+        document.getElementById("tipinfo_div").innerHTML=msg;
+    }
+    catch(eevv)
+    {
+        try
+        {
+            document.getElementById("tipinfo_div").setAttribute("nnerHTML",msg);
+        }
+        catch(vv){}
+    }
+}
+
+function ShowErrorTip2(msg)
+{
+	try
+	{
+		document.getElementById("tipinfo_div").innerHTML=msg;
+		document.getElementById("tipinfo_div").style.display = "";
+	}
+	catch(eevv)
+	{
+		try
+		{
+			document.getElementById("tipinfo_div").setAttribute("nnerHTML",msg);
+			document.getElementById("tipinfo_div").style.display = "";
+		}
+		catch(vv){}
+	}
+}
+
+
+function OnChangeLangSel(va,file)
+{
+    OnLoginChangeLanguage(va,file);
+    ShowErrorTip("");
+    InitCheckVersion();
+}
+
+
+function GetLang(ids,defval)
+{
+    var verseionerror = getNodeValue(ids);
+    if(verseionerror=="")
+    {
+        return defval;
+    }
+    return verseionerror;
+}
+
+function getCookie(cookieName){
+	var cookieContent = '';
+	var cookieAry = document.cookie.split("; ");//得到Cookie数组
+	for(var i=0;i<cookieAry.length;i++){
+		var temp = cookieAry[i].split("=");
+		if(temp[0] == cookieName){
+			cookieContent = unescape(temp[1]);
+		}
+	}
+	return cookieContent;
+}
+
+function GetCtrlVersion2()
+{
+	return getCookie("ctrl_version");
+}
+
+function InitCheckVersion()
+{
+    var verseionerror = GetLang("htmllogin_ctrlversionerror","");
+    try
+    {
+        var versioninfo=GetCtrlVersion2();
+        if(versioninfo=="")
+        {//not find version info 
+            return "";
+        }  
+        var ls=versioninfo.split("=");
+        var pubversion="2.0.2.4";
+        if(ls.length>1)
+        {
+            var ctrlverls=ls[1].split(".");
+            var pubverls=pubversion.split(".");
+            if(ctrlverls[0]!=pubverls[0] || ctrlverls[1]!=pubverls[1])
+            {
+                ShowErrorTip(verseionerror);
+                return verseionerror;
+            }
+            for(var idx=2;idx<4;idx++)
+            {
+                var cval=parseInt(ctrlverls[idx],10);
+                var pval=parseInt(pubverls[idx],10);
+                if(cval<pval)
+                {
+                    var havenewversion = GetLang("htmllogin_ctrlhavenewversion","");
+                    ShowErrorTip(havenewversion);
+                    return "";
+                }
+            }
+            return "";
+        }
+    }
+    catch(eevv)
+    {
+	    ShowErrorTip("");
+	}
+	return "";
+}
+
+
+function checkdata(thf)
+{
+    var Tips1 = getNodeValue("LoginTips1");
+    var Tips2 = getNodeValue("htmllogin_passisempty");
+	if(document.getElementById("username").value=="")
+	{
+		document.getElementById("username").setAttribute("value", "");
+		document.getElementById("username").focus();
+		return Tips1;
+	}
+	else if(document.getElementById("password").value=="")
+	{
+		document.getElementById("password").focus();
+		return Tips2;
+	}
+	var checkversionerror=InitCheckVersion();
+	if(checkversionerror!="")
+	{
+	    return checkversionerror;
+	}
+	return "";
+}
+
+
+
+function DoLogin()
+{
+    ShowErrorTip("");
+    var errormsg=checkdata("");
+    if(errormsg=="")
+    {
+        CheckAndLogin();
+        var userlogin_waitinfo=getNodeValue("userlogin_waitinfo");
+        ShowErrorTip(userlogin_waitinfo);
+    }
+    else
+    {
+        ShowErrorTip(errormsg);
+    }
+}
+
+
+function ChangeItem(idx,obj,objvalue)
+{
+    var KeyID = (window.event) ? event.keyCode : e.keyCode;
+    if (KeyID != 9)
+    {
+        return false;
+    }
+    if(idx==1)
+    {
+        if(objvalue!="")
+        {
+		    document.getElementById("password").focus();
+        }
+        else
+        {
+	        document.getElementById("username").focus();
+	    }
+    }
+    else if(idx==2)
+    {
+        if(objvalue!="")
+        {
+            document.getElementById("LoginButton").focus();  
+        }
+        else
+        {
+		    document.getElementById("password").focus();
+	    }
+    }
+    else
+    {
+        document.getElementById("username").focus();
+    }
+}
+
+function jsInitLg() 
+{
+    ShowErrorTip("");
+    GetViewType();
+    if(g_isIe11Viewer)
+    {
+        InitLoginLanguage('./xml/Login.xml',"LoginCallBack");//   
+    }
+    else
+    {
+        InitLoginLanguage('./xml/Login.xml',LoginCallBack);//   
+    }
+    try
+    {
+	    document.getElementById("username").focus();
+    }
+    catch(eevv){}
+    InitCheckVersion();
+}
+
+
+var allowselectlang=true;//if have more than one language,set allowselectlang=true
+//SetCookie('language', "en-us");//如果每次都要指定语言，则这里设置默认语言
+
+function Init_LoginOnload()
+{
+    jsInitLg();
+    InitCheckVersion();
+    document.getElementById("username").focus();
+    try
+    {
+	    if(allowselectlang)
+	    {
+	        document.getElementById("tdLanguage").style.display="block";
+	        document.getElementById("idLanguage").style.display="block";
+	    }
+        else
+        {
+		    document.getElementById("tdLanguage").style.display="none";
+		    document.getElementById("idLanguage").style.display="none";
+        }
+    }catch(eevv){}
+    //ShowErrorTip("");
+}
+Init_LoginOnload();
+
+</script>
+
+</body>
+</html>

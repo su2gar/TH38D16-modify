@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<TOPSEEConfig>
+<Hardware>
+<HardwareConfig
+AudioInputType="0"
+LightMode="3"
+LightVal="50"
+HWVersion="0"
+/>
+</Hardware>
+</TOPSEEConfig>

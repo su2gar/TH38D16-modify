@@ -1,0 +1,44 @@
+#! /bin/sh
+
+/bin/mount -a
+
+echo "
+            _ _ _ _ _ _ _ _ _ _ _ _
+            \  _  _   _  _ _ ___
+            / /__/ \ |_/
+           / __   /  -  _ ___
+          / /  / /  / /
+  _ _ _ _/ /  /  \_/  \_ ______
+___________\___\__________________
+"
+for initscript in /etc/init.d/S[0-9][0-9]*
+do
+	if [ -x $initscript ] ;
+	then
+		echo "[RCS]: $initscript"
+		$initscript
+	fi
+done
+
+echo 128 > /proc/sys/vm/min_free_kbytes
+echo 1 > /proc/sys/vm/overcommit_memory
+echo 1 > /proc/sys/vm/panic_on_oom
+echo 3 > /proc/sys/kernel/panic
+echo 4096 > /proc/sys/kernel/msgmax
+echo 32768 > /proc/sys/kernel/msgmnb
+echo 64 > /proc/sys/kernel/msgmni
+
+ifconfig lo 127.0.0.1                                    
+ifconfig eth0 mtu 1470                                   
+mkdir -p /tmp/ppp/peers    
+
+telnetd &
+memsize=36
+totalsize=64
+/bin/mem_fix $memsize $totalsize
+cd /opt/topsee/ko
+./load3516ev200 -i -sensor0 sc3235 -osmem $memsize -total $totalsize
+insmod hi3516ev200_wdt.ko "default_margin=30" "nodeamon=1"
+sleep 1
+
+/opt/topsee/sys_daemon &
